@@ -32,7 +32,9 @@
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "postinstall": "npm run build -- --prod --aot",
-    "preinstall": "npm install -g angular-cli"
+    "preinstall": "npm install -g angular-cli",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@agm/core": "^1.0.0-beta.5",
@@ -40,7 +42,7 @@
     "@angular/cdk": "^7.0.3",
     "@angular/common": "^7.0.3",
     "@angular/compiler": "^7.0.3",
-    "@angular/core": "^7.0.3",
+    "@angular/core": "^11.0.5",
     "@angular/forms": "^7.0.3",
     "@angular/http": "^7.0.3",
     "@angular/platform-browser": "^7.0.3",
@@ -52,16 +54,16 @@
     "@nebular/security": "3.0.0",
     "@nebular/theme": "3.0.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
-    "@swimlane/ngx-charts": "^10.0.0",
+    "@swimlane/ngx-charts": "^13.0.0",
     "angular-tree-component": "7.2.0",
     "angular2-chartjs": "0.4.1",
     "angular2-toaster": "^6.1.0",
-    "bootstrap": "4.0.0",
-    "chart.js": "2.7.1",
-    "ckeditor": "4.7.3",
+    "bootstrap": "4.3.1",
+    "chart.js": "2.9.4",
+    "ckeditor": "4.11.0",
     "classlist.js": "1.1.20150312",
     "core-js": "2.5.1",
-    "echarts": "^4.0.2",
+    "echarts": "^5.2.1",
     "eva-icons": "^1.1.0",
     "express": "^4.16.4",
     "intl": "1.2.5",
@@ -79,10 +81,11 @@
     "rxjs": "6.3.0",
     "rxjs-compat": "6.3.0",
     "socicon": "3.0.5",
-    "tinymce": "4.5.7",
+    "tinymce": "5.10.0",
     "typeface-exo": "0.0.22",
     "web-animations-js": "2.2.5",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.10.2",
@@ -120,5 +123,6 @@
   "engines": {
     "node": "8.11.4",
     "npm": "6.4.1"
-  }
+  },
+  "snyk": true
 }
